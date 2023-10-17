@@ -109,3 +109,112 @@ if num%3 == 0 && num%5 == 0 { fmt.Println("O número", num, "é múltiplo de 3 e
 } 
 else
 { 
+06-
+package main
+
+import "fmt"
+
+func main() {
+    var numero int
+
+    fmt.Print("Digite um número inteiro: ")
+    fmt.Scanln(&numero)
+
+    if numero%3 == 0 && numero%5 == 0 {
+        fmt.Println("O número é múltiplo de 3 e de 5.")
+    } else {
+        fmt.Println("O número não é múltiplo de 3 e de 5.")
+    }
+}
+07-
+package main
+
+import "fmt"
+
+func main() {
+    var numero1, numero2 int
+
+    fmt.Print("Digite o primeiro número inteiro: ")
+    fmt.Scanln(&numero1)
+
+    fmt.Print("Digite o segundo número inteiro: ")
+    fmt.Scanln(&numero2)
+
+    if numero1 > 0 && numero2 > 0 {
+        resultado := numero1 * numero2
+        fmt.Println("O resultado da multiplicação é:", resultado)
+    } else {
+        resultado := numero1 + numero2
+        fmt.Println("O resultado da soma é:", resultado)
+    }
+}
+08-
+package main
+
+import "fmt"
+
+func main() {
+    var salario float64
+
+    fmt.Print("Digite o salário do funcionário: ")
+    fmt.Scanln(&salario)
+
+    if salario < 1000 {
+        novoSalario := salario * 1.1
+        fmt.Println("O novo salário com aumento de 10% é:", novoSalario)
+    } else {
+        novoSalario := salario * 1.05
+        fmt.Println("O novo salário com aumento de 5% é:", novoSalario)
+    }
+}
+09-
+package main
+
+import "fmt"
+
+func main() {
+    var numero int
+
+    fmt.Print("Digite um número inteiro entre 1 e 7: ")
+    fmt.Scanln(&numero)
+
+    switch numero {
+    case 1:
+        fmt.Println("Domingo")
+    case 2:
+        fmt.Println("Segunda-feira")
+    case 3:
+        fmt.Println("Terça-feira")
+    case 4:
+        fmt.Println("Quarta-feira")
+    case 5:
+        fmt.Println("Quinta-feira")
+    case 6:
+        fmt.Println("Sexta-feira")
+    case 7:
+        fmt.Println("Sábado")
+    default:
+        fmt.Println("Número inválido. Digite um número entre 1 e 7.")
+    }
+}
+10-
+package main
+
+import "fmt"
+
+func main() {
+    var idade int
+
+    fmt.Print("Digite a idade: ")
+    fmt.Scanln(&idade)
+
+    if idade <= 9 {
+        fmt.Println("Classificação: Mirim")
+    } else if idade >= 10 && idade <= 13 {
+        fmt.Println("Classificação: Infantil")
+    } else if idade >= 14 && idade <= 17 {
+        fmt.Println("Classificação: Juvenil")
+    } else {
+        fmt.Println("Classificação: Adulto")
+    }
+}
